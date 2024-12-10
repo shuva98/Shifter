@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shift in select boxes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="lBox"
+          >Select the country and choose the arrow to shift the countries from
+          left "select box" to right one and vice versa.
+        </label>
+      </div>
+      <div class="container">
+        <div class="box">
+          <select name="lBox" class="lBox" multiple>
+            <option value="nepal">Nepal</option>
+            <option value="america">America</option>
+            <option value="australia">Australia</option>
+            <option value="singapore">Singapore</option>
+          </select>
+        </div>
+        <div class="verticalContainer">
+          <div class="box">
+            <button type="button" onclick="shiftOption('.rBox','.lBox')">
+              &lt;
+            </button>
+          </div>
+          <div class="box">
+            <button type="button" onclick="shiftOption('.lBox','.rBox')">
+              &gt;
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <select name="rBox" class="rBox" multiple>
+            <option value="canda">Canada</option>
+            <option value="england">England</option>
+          </select>
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
